@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_30_143046) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_30_172006) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_30_143046) do
     t.string "code_insee", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "population"
     t.index ["intercommunality_id"], name: "index_communes_on_intercommunality_id"
   end
 

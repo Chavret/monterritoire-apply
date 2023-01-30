@@ -12,6 +12,10 @@ class Intercommunality < ApplicationRecord
   end
 
   def generate_slug
-    self.slug ||= name.parameterize
+    self.slug ||= name&.parameterize
+  end
+
+  def population
+    communes.sum(:population)
   end
 end
